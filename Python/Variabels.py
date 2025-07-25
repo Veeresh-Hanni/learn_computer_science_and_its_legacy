@@ -1,9 +1,6 @@
 # Demonstrating basic data types in Python
 
 # Integer
-from matplotlib.pylab import long
-
-
 num = 10
 
 # Float
