@@ -1,4 +1,4 @@
-# Function to get sum of two numbers
+# 1. Function to get sum of two numbers
 def get_sum(number1: int, number2: int) -> int:
     sum = number1 + number2
     return sum
@@ -6,8 +6,9 @@ def get_sum(number1: int, number2: int) -> int:
 
 # Immutable - int, float, string, tuple
 # you can't update their values. Every time you update, new space is allocated
-# Function swapNumbers to swap two variable values
+# 2. Function swapNumbers to swap two variable values
 def swap_two_numbers(item1: int, item2: int):
+
     temp = item1
     item1 = item2
     item2 = temp
@@ -19,14 +20,14 @@ def swap_two_numbers_v2(item1: int, item2: int):
     return item2, item1
 
 
-# Function to find even Nimber
+# 3. Function to find even Nimber
 def is_even(number: int) -> bool:
     if number % 2 == 0:
         return True
     else:
         return False
 
-# Function is_number return True if it is Integer
+# 4. Function is_number return True if it is Integer
 def is_number(string: str) -> bool:
     is_num = True
     for character in string:
@@ -46,6 +47,7 @@ def is_number_v2(string: str) -> bool:
     return True
 
 
+# 5. Function to simple greetings
 def simple_greetings(name: str) -> str:
     return (f"Namaskara, {name}")
 

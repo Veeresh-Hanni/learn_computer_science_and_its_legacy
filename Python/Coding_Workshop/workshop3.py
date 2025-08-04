@@ -53,13 +53,14 @@ def invoke_is_palindrome():
 
     string = "abc"
 
-    palindrome = is_palindrome(string)
+    palindrome = is_palindrome_v2(string)
     print(palindrome)
-    string = "abba"
+    string = "a"
 
-    is_palindrome = is_palindrome_v2(string)
+    is_palindrome = is_palindrome_v3(string)
     print(is_palindrome)
 
+invoke_is_palindrome()
 
 
 # 12. Function to find minimum and maximum value in array

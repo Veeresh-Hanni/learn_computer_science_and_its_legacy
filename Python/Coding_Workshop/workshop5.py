@@ -12,7 +12,6 @@ def print_unique_elements(array: list):
                 break
 
         if is_duplicate == False:
-
             print(array[read_index])
 
 def invoke_print_unique_elements():
@@ -20,27 +19,23 @@ def invoke_print_unique_elements():
     input2 = [1,2,3,4,5]
     print_unique_elements(input1)
 
-# invoke_print_unique_elements()
+invoke_print_unique_elements()
 
 # 17. Function to print intersection or common elements of two integer arrays 
 def common_elements(array1: list, array2: list) -> list:
     # list_of_common_elements = []
-
     for array1_value in range(0,len(array1), 1):
-        is_found = False
 
+        is_found = False
         for array2_value in range(0,len(array2), 1):
 
             if array1[array1_value] == array2[array2_value]:
                 # list_of_common_elements.append(array1[array1_value])
-
                 is_found = True
-
                 break
-        
+
         if is_found:
             print(array1[array1_value])
-
     # return list_of_common_elements
 
 def invoke_common_elements():
@@ -49,32 +44,27 @@ def invoke_common_elements():
     common_elements(array1,array2)
     # print(common_elements(array1,array2))
 
-# invoke_common_elements()
+invoke_common_elements()
 
 # 18. Function to get count of words in string
 def get_count_words(string: str) -> int:
-    
     counter = 1
     
     if len(string) == 0:
         return 0
     
-
     for character in string:
 
         if character == ' 'or character == '\t' or character  == '\n':
                 # counter == 0
             counter += 1
             
-
-
     return counter
 
 def invoke_get_count_words():
     string = "Hello World"
     words_count = get_count_words(string)
     print(f"words present in {string} : {words_count}")
-
 invoke_get_count_words()
 
 # 19. Function to print binary values of various input like integer, char, also perform shift operations on integer
@@ -97,6 +87,7 @@ def print_binary_values_of_input(number: int):
 def invoke_print_binary_values_of_input():
     print_binary_values_of_input(10)
 
+invoke_print_binary_values_of_input()
 
 # 20. Function to remove space from string
 def remove_space(string: str) :
