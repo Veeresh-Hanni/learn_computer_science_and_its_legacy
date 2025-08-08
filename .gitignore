@@ -11,3 +11,7 @@
 Aptitude/
 code Images/
 
+__pycache__/
+
+
+.vscode/
