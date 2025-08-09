@@ -1,3 +1,7 @@
+# application.py
+
+
+# import code from other directory files -> (package)
 from DataStructures.mylist import MyList
 from analysis.myanalysis import MyAnalysis
 
