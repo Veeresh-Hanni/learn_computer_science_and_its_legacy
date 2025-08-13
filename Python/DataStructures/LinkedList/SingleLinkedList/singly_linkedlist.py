@@ -1,7 +1,4 @@
 # class which represents node in singlylinkedlist
-from numpy import insert
-
-
 class Node:
     def __init__(self, data):
         self.data = data
@@ -135,7 +132,7 @@ if __name__ == "__main__":
 
     # inserrt at given position
     insert_delete_at_given_position(sl)
-    
+
     print("List is Created successfully")
 
     # print data
