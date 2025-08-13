@@ -38,11 +38,6 @@ class SinglyLinkedList:
         """
         if self.head is None:
             return
-
-        # list has only one node
-        if (self.head.next == None):
-            self.head = None
-            return  
         
         self.head = self.head.next
 
@@ -88,7 +83,6 @@ class SinglyLinkedList:
             return
         
         # insert at first position
-
         if delete_position == 1:
             self.delete_at_beginning()
             return
@@ -110,8 +104,9 @@ class SinglyLinkedList:
         
         
         current_node.next = current_node.next.next
-        
 
+
+# invocation code for insert/delete at_given_position 
 def insert_delete_at_given_position(list: SinglyLinkedList):
 
     list.insert_at_given_position(data = 10, insert_position = -1)
