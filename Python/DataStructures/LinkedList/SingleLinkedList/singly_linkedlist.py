@@ -133,8 +133,9 @@ if __name__ == "__main__":
     # sl.insert_at_beginning(1)
     sl.insert_at_beginning(34)
 
-    insert_delete_at_given_position(sl)
     # inserrt at given position
+    insert_delete_at_given_position(sl)
+    
     print("List is Created successfully")
 
     # print data
