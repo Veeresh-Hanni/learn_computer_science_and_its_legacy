@@ -69,9 +69,11 @@ class SinglyLinkedList:
             
             # otherwise throw error
             print("Invalid position reach last")
+            # raise IndexError("Position out of range")
             return
         
         new_node = Node(data)
+
         new_node.next = current_node.next
         current_node.next = new_node
     
