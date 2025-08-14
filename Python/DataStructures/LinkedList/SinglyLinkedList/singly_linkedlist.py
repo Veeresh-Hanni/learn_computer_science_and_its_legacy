@@ -123,6 +123,7 @@ class SinglyLinkedList:
         
         current_node.next = current_node.next.next
 
+    # print list nodes
     def print_nodes(self):
         # if list is empty
         if self.head == None:
@@ -140,6 +141,7 @@ class SinglyLinkedList:
 
         print("None")
 
+    # search any node in list
     def search(self, key):
         # if list is empty
         if self.head == None:
@@ -158,6 +160,7 @@ class SinglyLinkedList:
             current_node = current_node.next
 
         print("not found")
+
 # invocation code for insert/delete at_given_position 
 def insert_delete_at_given_position(list: SinglyLinkedList):
 
