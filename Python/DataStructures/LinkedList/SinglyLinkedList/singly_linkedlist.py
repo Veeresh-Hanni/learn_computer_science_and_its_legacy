@@ -58,6 +58,35 @@ class SinglyLinkedList:
 
         current_node.next = None
 
+    def insert_at_end(self, data):
+        
+        # ceate an object of type Node
+        new_node = Node(data)
+
+        # 1. when list is  empty
+        if (self.head  == None):
+            self.head = new_node
+            return
+        
+        # 2. one node in list
+        # if (self.head.next == None):
+        #     self.head.next = new_node
+        #     return
+        
+
+        # this will work for both one and more than one node
+        # more than one node loop till the last node
+
+        current_node = self.head
+
+        while(current_node.next != None):
+
+            current_node = current_node.next
+        
+        # set the last node to new node
+        current_node.next = new_node
+
+
     def insert_at_given_position(self, data, insert_position):
         # position invalid
         if insert_position <= 0:
@@ -124,7 +153,7 @@ class SinglyLinkedList:
         current_node.next = current_node.next.next
 
     # print list nodes
-    def print_nodes(self):
+    def print_list(self):
         # if list is empty
         if self.head == None:
             print("List is empty")
@@ -161,6 +190,8 @@ class SinglyLinkedList:
 
         print("not found")
 
+# driver codes
+
 # invocation code for insert/delete at_given_position 
 def insert_delete_at_given_position(list: SinglyLinkedList):
 
@@ -195,23 +226,32 @@ def delete_opearations_start_end(list: SinglyLinkedList):
     list.delete_at_end()
     list.delete_at_end()
 
+def insert_at_end_driver_code(list: SinglyLinkedList):
+
+    list.insert_at_end(10)
+    list.insert_at_end(20)
+    list.insert_at_end(30)
+    list.insert_at_end(40)
+    list.insert_at_end(50)
+
+
 def print_list_driver_code(list: SinglyLinkedList):
-    list.print_nodes()
+    list.print_list()
     list.insert_at_beginning(13)
-    list.print_nodes()
+    list.print_list()
 
     # list.insert_at_beginning(28)
 
     list.insert_at_given_position(23,2)
-    list.print_nodes()
+    list.print_list()
 
     list.insert_at_beginning(55)
-    list.print_nodes()
+    list.print_list()
 
 def search_driver_code(list: SinglyLinkedList):
 
     list.search(23)
-    list.search(5)
+    # list.search(5)
 # driver code to test above class
 if __name__ == "__main__":
     # create Singly Linked list
@@ -233,5 +273,9 @@ if __name__ == "__main__":
     # print("Next node data is", list.head.next.next.data)
 
     # delete_opearations_start_end(list)
-    print_list_driver_code(list)
-    search_driver_code(list)
+    # print_list_driver_code(list)
+    # search_driver_code(list)
+    
+    insert_at_end_driver_code(list) # O(N) time Complexity
+    # print_list_driver_code(list)
+    list.print_list()
