@@ -1,3 +1,6 @@
+from sympy import true
+
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -110,7 +113,48 @@ class CircularLinkedList:
         
         print(f"{key} is not present in list ❌")
 
+    def display_reverse(self):
+        if self.tail is None:
+            print("List is empty!")
+            return
 
+        current = self.tail
+        while True:
+            # Find node before current
+            prev = self.tail
+            while prev.next != current:
+                prev = prev.next
+
+            print(current.data, end=" -> ")
+
+            if current == self.tail.next:  # stop when head is printed
+                break
+
+            current = prev
+        print("(back to start)")
+
+
+                
+
+    def length(self) -> int:
+        # case 1: List is empty
+        if (self.tail == None):
+            print("List is Empty")
+            return
+        
+        current_node = self.tail.next
+        count = 1
+        while (True):
+            # print(f"{current_node.data} --> ", end=" ")
+
+            if (current_node == self.tail):
+                break
+            
+            current_node = current_node.next
+            count += 1
+
+        return count
+    
 
 def Circular_Linked_List_tests(clist: CircularLinkedList):
     # List is emptyand trying to delete a node
@@ -138,8 +182,10 @@ def Circular_Linked_List_tests(clist: CircularLinkedList):
     clist.insert_at_beginning(30)
 
     clist. insert_at_end_tail(40)
+    clist. insert_at_end_tail(50)
 
     clist.print_all_nodes()
+
     clist.search_key(40)
     clist.search_key(100)
 
@@ -182,3 +228,6 @@ if __name__ == "__main__":
     clist = CircularLinkedList()
     Circular_Linked_List_tests(clist)
     # infinite_loop_demo(Infine_loop_demo())
+    
+    clist.display_reverse()
+    print(f"Length: {clist.length()}")
