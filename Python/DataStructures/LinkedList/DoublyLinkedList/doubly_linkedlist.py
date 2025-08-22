@@ -185,10 +185,10 @@ class DoublyLinkedList:
     def print_all_nodes_list(self):
 
         current_node = self.head
-
+        print("None", end=" ")
         while current_node is not None:
 
-            print("<->",current_node.data, "<->", end=" ")
+            print("<->", current_node.data, end=" ")
 
             current_node = current_node.next
 
@@ -216,6 +216,9 @@ class DoublyLinkedList:
             current_node = current_node.prev
 
         print("<-> None")
+
+        
+        
 
     def search_key(self, key):
         if self.head is None: 
@@ -361,5 +364,5 @@ if __name__ == "__main__":
     # insert_at_given_position_test_code(dlist)
     # delete_at_beginning_end_test_code(dlist)
     # delete_at_position_test_code(dlist)
-    # print_all_nodes_test_code(dlist)
+    print_all_nodes_test_code(dlist)
     serach_key_test_code(dlist)
