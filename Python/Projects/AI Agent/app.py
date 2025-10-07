@@ -37,9 +37,9 @@ def main(argv: list[str]) -> int:
 
     try:
         # Step 1 - create a client to talk to GPT or Gen AI 
-        # client = OpenAIChatClient(model="gpt-4o-mini")
+        client = OpenAIChatClient(model="gpt-4o-mini")
 
-        client = GeminiAIChatClient("gemini-1.5-flash")
+        # client = GeminiAIChatClient("gemini-1.5-flash")
 
         # Step 2 - Create a specific agent to be invoked (motivation agent)
         agent = AIMotivationalQuoteAgent(client)
