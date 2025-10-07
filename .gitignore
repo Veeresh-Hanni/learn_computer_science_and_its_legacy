@@ -16,3 +16,4 @@ venv/
 
 .vscode/
 GUI_Projects/
+logs/
