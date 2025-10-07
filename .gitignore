@@ -6,12 +6,13 @@
 *.tiff
 *.svg
 *.tmp
+*.txt
 
 Aptitude/
 code Images/
 
 __pycache__/
-
+venv/
 
 .vscode/
 GUI_Projects/
