@@ -27,7 +27,7 @@ def main(argv: list[str]) -> int:
         print("ERROR: OPENAI_API_KEY is not set in your environment.", file=sys.stderr)
         return 1
     elif not os.getenv("GEMINI_API_KEY"):
-        print("❌ ERROR: GOOGLE_API_KEY is not set in your environment.", file=sys.stderr)
+        print("❌ ERROR: GOOGLE_API_KEY is not set in your enviroPnment.", file=sys.stderr)
         return 1
 
 
